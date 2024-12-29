@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaMicrophone } from "react-icons/fa";
 
 const App = () => {
   const [notifications, setNotifications] = useState([]);
@@ -46,7 +47,19 @@ const App = () => {
         <div className="mt-14 w-full">
 
           <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" />
-          <input onClick={record} type="text" name="speech" id="speech" placeholder="Say something" />
+          <div className=" mt-3 w-full relative">
+          <input onClick={record}
+            className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 pl-10"
+            id="speech"
+            type="text"
+            name="speech"
+            placeholder="Say something"
+          />
+          <FaMicrophone
+            onClick={record}
+            className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-600 cursor-pointer"
+          />
+        </div>
         </div>
 
 
